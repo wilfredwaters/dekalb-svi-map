@@ -86,7 +86,7 @@
 </style>
 <div id="about"><div class="hd"><span>About this map</span><button class="btn" onclick="document.getElementById('about').style.display='none';document.getElementById('reopen').style.display='block'">Close</button></div><div class="bd"><h1>About this map</h1>
 <h2>The goal</h2>
-<p>This map supports equity in DeKalb County, Georgia. The aim is to find the structural causes of vulnerability so they can be removed. "Structural" means conditions built into how housing, jobs, health care and money work, not traits of the people who live there.</p>
+<p>This map supports equity in DeKalb County, Georgia. The aim is to find the structural causes of vulnerability so they can be removed. "Structural" means conditions built into how housing, jobs, health care and money work, not traits of the people who live there. The no-diploma layer narrows this to one structural driver, lack of a high school diploma, and asks whether the Dunwoody cluster schools are in the places where it matters most.</p>
 <h2>What the CDC Social Vulnerability Index is</h2>
 <p>The CDC Social Vulnerability Index (SVI) shows which places may need the most help in a disaster or crisis. It uses 16 measures, such as poverty, people without health insurance, and households with no car.</p>
 <p>The map works with census tracts. A census tract is a small neighborhood area set by the Census Bureau, usually with 2,500 to 8,000 people. DeKalb has 203 tracts. 201 of them have SVI data, and this map uses all 201.</p>
@@ -147,10 +147,14 @@
 <p><strong>Structural share of the score: 86.0%.</strong> Structural measures make up 86.0% of this tract's score. That is higher than the DeKalb average of 70.5%. So more of the vulnerability here comes from things policy can change.</p>
 <p><strong>Measures that make up 25% of the score: Uninsured; Housing cost burden; Limited English.</strong> The first two reach 22.9% (11.9% plus 11.0%), so a third is needed. With Limited English, the total is 33.8%. So these three measures together make up a quarter of the score.</p>
 <p><strong>The rates.</strong> The last lines show the percent of residents who are a minority, below 150% of the poverty line, uninsured, and cost-burdened. The number after &plusmn; is the survey's margin of error. For example, &plusmn;5 means the true value is likely within 5 points either way.</p></details><h2>How to use the map</h2><p><b>Ask Grok link.</b> Each popup also has an "Ask Grok about this tract" link. It opens Grok in a new tab with a question that includes that tract's numbers. The question is filled in for you, and those numbers go to Grok only if you press send.</p>
+<h2>The no-diploma layer</h2>
+<p>This layer highlights tracts where lack of a high school diploma is a structural source of vulnerability. A tract is outlined in magenta when all three of these hold: no high school diploma is one of its top 3 structural drivers, its share of the score from that measure is in the top quarter of DeKalb tracts, and its overall score is above the county median (0.58). The share is used as a stand-in for the diploma rate, which is not in this data.</p>
+<p>The blue outlines mark the tracts that contain the Dunwoody cluster schools: Austin, Vanderlyn, Dunwoody, Chesnut and Kingsley Elementary, Peachtree Middle, and Dunwoody High. These are tracts 212.10, 212.24 and 212.29. Two of them, 212.10 and 212.29, are among the least vulnerable tracts in the county, with scores of 0.04 and 0.01. The third, 212.24, scores 0.61, just above the median. None of the magenta tracts is in the cluster.</p>
 <ul>
 <li><strong>Overall SVI:</strong> tracts colored by score in four groups: Low (0 to 0.25), Low-moderate (0.25 to 0.50), Moderate-high (0.50 to 0.75) and High (0.75 to 1).</li>
 <li><strong>#1 structural driver:</strong> the biggest structural measure in each tract.</li>
 <li><strong>Minority share:</strong> the percent of residents who are a racial or ethnic minority.</li>
+<li><strong>No-diploma layer:</strong> magenta outlines mark the priority tracts described above, and blue outlines mark the Dunwoody cluster tracts. Both are outlines only, with no fill.</li>
 <li><strong>Tap any tract</strong> to see its score, top drivers and rates with margins of error.</li>
 <li><strong>Switch the background map</strong> with the layer button in the top right (street map, gray map or topographic map).</li>
 </ul>
