@@ -541,5 +541,34 @@ if(lg){ var t=document.createElement('button'); t.className='btn'; t.id='lgbtn';
   t.onclick=show; var c=document.createElement('div'); c.innerHTML='<button class="btn" style="float:right;padding:2px 6px">Hide</button>'; c.firstChild.onclick=hide; lg.insertBefore(c,lg.firstChild);
   if(window.innerWidth<700) hide(); else show(); }
 })();
+
+(function(){
+// Priority layer: no-diploma is a top-3 structural driver, its share of the
+// score is in the county's top quarter, and the tract is above the county
+// median overall score. Dunwoody cluster: tracts containing its schools.
+var PRIORITY = ["13089021420", "13089023431", "13089022012", "13089021410", "13089023427", "13089021204", "13089021308", "13089022011", "13089021310", "13089021812", "13089022016"];
+var CLUSTER = ["13089021210", "13089021224", "13089021229"];
+var MEDIAN = 0.5817, Q75 = 0.073;
+var src = geo_json_bf9a23d19065cc6d2d806ecafd7be546;
+var pri = [], clu = [];
+src.eachLayer(function(l){
+  var f = l.feature; var id = f.properties.GEOID || f.id;
+  if(PRIORITY.indexOf(id) >= 0) pri.push(f);
+  if(CLUSTER.indexOf(id) >= 0) clu.push(f);
+});
+function bindTract(f, text){
+  return function(feat, layer){ layer.bindPopup(window.SVI.popupHtml(feat.properties.GEOID || feat.id) + text, {maxWidth:300}); };
+}
+var priLayer = L.geoJSON({type:'FeatureCollection', features:pri}, {
+  style:{fillColor:'#d7301f', fillOpacity:0.6, color:'#7f0000', weight:1},
+  onEachFeature: bindTract(null, '<br><b>Priority:</b> no-diploma is a top-3 driver, in the county top quarter for its share, and above the county median score.')
+});
+var cluLayer = L.geoJSON({type:'FeatureCollection', features:clu}, {
+  style:{fillColor:'#2c7fb8', fillOpacity:0.6, color:'#08306b', weight:1},
+  onEachFeature: bindTract(null, '<br><b>Dunwoody cluster:</b> contains a Dunwoody cluster school.')
+});
+var group = L.featureGroup([priLayer, cluLayer]);
+layer_control_097befece45624d0ea761f79e99176c6.addOverlay(group, 'No-diploma priority (red) + Dunwoody cluster (blue)');
+})();
 </script>
 </html>
