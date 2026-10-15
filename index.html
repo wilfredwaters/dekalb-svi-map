@@ -443,6 +443,7 @@ var noHsGroup = L.featureGroup([
   L.geoJSON({type:'FeatureCollection', features:noHsPri}, {style:{fillColor:'#d7301f', fillOpacity:0, color:'#d7301f', weight:4}}),
   L.geoJSON({type:'FeatureCollection', features:noHsClu}, {style:{fillColor:'#08519c', fillOpacity:0, color:'#08519c', weight:4}})
 ]);
+noHsGroup.addTo(map_81f614882c315cc8a20dc059629ce4e3);
 map_81f614882c315cc8a20dc059629ce4e3.on('overlayadd', function(){
   if(!map_81f614882c315cc8a20dc059629ce4e3.hasLayer(noHsGroup)) return;
   noHsGroup.eachLayer(function(s){ if(s.bringToFront) s.bringToFront(); });
