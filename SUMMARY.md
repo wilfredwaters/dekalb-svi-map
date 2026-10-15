@@ -44,6 +44,23 @@ Each measure is turned into a percentile. A percentile tells you how a tract com
 
 So the poverty rate is about 2.6 times as high in mostly minority tracts, and the uninsured rate is about 3.4 times as high. Mostly minority tracts (75% or more) hold 56.5% of DeKalb's residents. But they hold 73.1% of the people below 150% of the poverty line and 72.6% of the uninsured.
 
+## How to read a popup (example)
+Every tract's popup has an **Explain this tract** button. Tap it to get a plain-language explanation of that tract's own numbers. Here is what one popup means, line by line, for **Census Tract 213.06** (FIPS code 13089021306).
+
+**The name and ID.** A census tract is a small neighborhood area drawn by the Census Bureau. Its ID number (FIPS code) is 13089021306. The first 2 digits (13) mean Georgia. The next 3 (089) mean DeKalb County. The last 6 (021306) mean tract 213.06.
+
+**Overall vulnerability score (0-1): 0.582 (Moderate-high).** This tract is more vulnerable than about 58% of all census tracts in the United States. Scores are split into four groups, called quartiles. A score between 0.50 and 0.75 puts it in the Moderate-high group.
+
+**Top 5 contributors.** The score adds up 16 measures. If they all counted the same, each would be 6.25% of the score. Here the biggest one is Uninsured at 11.9%, about 1.9 times the average share. The top 5 are Uninsured (11.9%, people with no health insurance), Housing cost burden (11.0%, households that spend 30% or more of their income on housing), Limited English (10.9%, people who speak English less than well), Multi-unit housing (10.5%, homes in buildings with 10 or more units) and Crowding (9.2%, homes with more people than rooms).
+
+**Top 3 structural drivers (33.8% combined).** Structural drivers are conditions that policy can change. Here they are Uninsured, Housing cost burden and Limited English. Together they make up 33.8% of the score. These are the policy levers: the places where action could lower vulnerability the most.
+
+**Structural share of the score: 86.0%.** Structural measures make up 86.0% of this tract's score. That is higher than the DeKalb average of 70.5%. So more of the vulnerability here comes from things policy can change.
+
+**Measures that make up 25% of the score: Uninsured; Housing cost burden; Limited English.** The first two reach 22.9% (11.9% plus 11.0%), so a third is needed. With Limited English, the total is 33.8%. So these three measures together make up a quarter of the score.
+
+**The rates.** The last lines show the percent of residents who are a minority, below 150% of the poverty line, uninsured, and cost-burdened. The number after &plusmn; is the survey's margin of error. For example, &plusmn;5 means the true value is likely within 5 points either way.
+
 ## How to use the map
 - **Overall SVI:** tracts colored by score in four groups: Low (0 to 0.25), Low-moderate (0.25 to 0.50), Moderate-high (0.50 to 0.75) and High (0.75 to 1).
 - **#1 structural driver:** the biggest structural measure in each tract.
